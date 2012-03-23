@@ -122,14 +122,6 @@
    :added "1.3"}
   [^Number x] (clojure.lang.rt/uncheckedDoubleCast x))
 
-
-(defn number?
-  "Returns true if x is a Number"
-  {:added "1.0"
-   :static true}
-  [x]
-  (instance? Number x))
-
 (defn mod
   "Modulus of num and div. Truncates toward negative infinity."
   {:added "1.0"
@@ -139,12 +131,6 @@
     (if (or (zero? m) (= (pos? num) (pos? div)))
       m 
       (+ m div))))
-
-(defn ratio?
-  "Returns true if n is a Ratio"
-  {:added "1.0"
-   :static true}
-  [n] (instance? clojure.lang.Ratio n))
 
 (defn numerator
   "Returns the numerator part of a Ratio."

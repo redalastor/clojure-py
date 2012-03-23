@@ -2939,7 +2939,12 @@
 
 ; FIXME: Am I polluting the namespace by requiring those?!
 (require 'numbers :only ['Number])
+(require 'fractions :only ['Fraction])
 
 (defn number? [n]
     "Returns true if n is a number. Works for int, long, Decimal, Fractions and anything else that implements the Number Abstract Base Class"
     (instance? Number n))
+
+(defn ratio?
+  "Returns true if n is a Ratio"
+  [n] (instance? Fraction n))
