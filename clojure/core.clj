@@ -2941,6 +2941,7 @@
 (require 'numbers :only ['Number 'Rational])
 (require 'fractions :only ['Fraction])
 (require 'decimal :only ['Decimal])
+(require 'random :only ['randint])
 
 (defn number? [n]
     "Returns true if n is a number. Works for int, long, Decimal, Fractions and anything else that implements the Number Abstract Base Class"
@@ -2963,4 +2964,6 @@
   "Returns true if n is a rational number"
   [n] (instance? Rational))
 
-
+(defn rand-int
+  "Returns a random integer between 0 (inclusive) and n (exclusive)."
+  [n] (randint 0 (dec n)))
