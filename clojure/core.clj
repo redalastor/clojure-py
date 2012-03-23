@@ -2938,7 +2938,7 @@
 (require 'clojure.core-deftype :only ['deftype 'reify 'definterface 'defprotocol])
 
 ; FIXME: Am I polluting the namespace by requiring those?!
-(require 'numbers :only ['Number])
+(require 'numbers :only ['Number 'Rational])
 (require 'fractions :only ['Fraction])
 (require 'decimal :only ['Decimal])
 
@@ -2958,4 +2958,9 @@
   "Returns true if n is a floating point number"
   [n]
   (instance? py/float n))
+
+(defn rational?
+  "Returns true if n is a rational number"
+  [n] (instance? Rational))
+
 

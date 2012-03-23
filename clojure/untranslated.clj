@@ -148,21 +148,6 @@
   [r]
   (.denominator ^clojure.lang.Ratio r))
 
-(defn float?
-  "Returns true if n is a floating point number"
-  {:added "1.0"
-   :static true}
-  [n]
-  (or (instance? Double n)
-      (instance? Float n)))
-
-(defn rational? 
-  "Returns true if n is a rational number"
-  {:added "1.0"
-   :static true}
-  [n]
-  (or (integer? n) (ratio? n) (decimal? n)))
-
 (defn bigint
   "Coerce to BigInt"
   {:tag clojure.lang.BigInt
