@@ -2953,3 +2953,9 @@
 (defn decimal?
   "Returns true if n is a Decimal"
   [n] (instance? Decimal n))
+
+(defn float?
+  "Returns true if n is a floating point number"
+  [n]
+  (instance? py/float n))
+
