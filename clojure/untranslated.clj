@@ -148,12 +148,6 @@
   [r]
   (.denominator ^clojure.lang.Ratio r))
 
-(defn decimal?
-  "Returns true if n is a BigDecimal"
-  {:added "1.0"
-   :static true}
-  [n] (instance? BigDecimal n))
-
 (defn float?
   "Returns true if n is a floating point number"
   {:added "1.0"
